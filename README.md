@@ -1,2 +1,3 @@
-# template_html
-Base HTML pour le front
+# Ville du futur
+
+Site promotionnel pour la conférence sur la ville du futur
