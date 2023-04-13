@@ -9,21 +9,56 @@
 
 :root {
     --bleu: #A5D7E8;
+    --blanc: #FFF;
+    --gris: #E4E4E4;
+    --bleu-fonce: #B7CFF0;
+
     --title: 2.5rem;
     --sub-title: 1.4rem;
     --bottom-title: 1.2rem;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    height: 98svh;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+body::-webkit-scrollbar{ display: none; }
+
+section {
     width: 100svw;
-    overflow: hidden;
+    height: 100svh;
+    
+}
+
+section:nth-child(1) { background-color: var(--bleu); }
+section:nth-child(2) { background-color: var(--blanc); }
+section:nth-child(3) { background-color: var(--blanc); }
+section:nth-child(4) { background-color: var(--gris); }
+section:nth-child(5) { background-color: var(--bleu-fonce); }
+section:nth-child(6) { background-color: var(--blanc); }
+
+.landpage {
+    height: 100svh;
     display: grid;
     grid-template-rows: 12% 80% 8%;
-    background-color: var(--bleu);
+    /* background-color: var(--bleu); */
     color: white;
     font-family: 'Urbanist';
-    padding: 1svh 0;
+    padding: 1svh 0 30px;
+}
+
+.main-content {
+    height: 100svh;
+    display: grid;
+    grid-template-rows: 92% 8%;
+    /* background-color: var(--bleu); */
+    color: black;
+    font-family: 'Urbanist';
+    padding: 30px;
 }
 
 header, main, footer {
@@ -66,7 +101,7 @@ main h2 {
 main .illustration {
     width: inherit;
     display: flex;
-    height: 100%;
+    height: 80%;
     justify-content: center;
 }
 
@@ -94,6 +129,10 @@ footer a {
     animation-direction: alternate;
 }
 
+.main-content footer a {
+    color: black;
+}
+
 /* ANIMATION ARROW DOWN */
 
 footer:hover a{
@@ -112,6 +151,29 @@ footer:hover a{
 }
 
 
+.gotop {
+    position: sticky;
+    bottom: 50px;
+    display: block;
+    text-align: end;
+    font-size: var(--sub-title);
+    color: #353535;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+
+
+/*CONTENT SECTIONS */
+
+/* .main-content h3, .main-content p {
+    margin: 30px;
+} */
+
+
+
+/* MEDIA QUERIES */
+
 
 
 @media screen and (min-width: 768px){
@@ -124,6 +186,7 @@ footer:hover a{
 
 @media screen and (min-width: 1024px){
     :root {
+        --bleu: #B0E9B0;
         --title: 4.5rem;
         --sub-title: 2.2rem;
         --bottom-title: 1.9rem;
@@ -138,12 +201,40 @@ footer:hover a{
     }
 }
 
-@media screen and (orientation: landscape) {
+@media (orientation: landscape) {
     main .illustration img {
         aspect-ratio: 375/231;
         height: 100%;
         width: initial;
     }
+
+    .main-content .top {
+        gap: 0px;
+    }
+
+    .main-content .top {
+        display: grid;
+        width: 100svw;
+        grid-template-columns: 30% 70%;
+    }
+
+    .main-content .top .paragraph {
+        width: 100%;
+    }
+
+    .main-content .top .illustration {
+        width: 100%;
+        display: flex;
+        height: auto;
+        justify-content: start;
+    }
+
+    .main-content .top .illustration img {
+        aspect-ratio: 375/231;
+        height: initial;
+        width: 80%;
+    }
+
 }
 
 
