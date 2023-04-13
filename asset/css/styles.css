@@ -44,7 +44,7 @@ section:nth-child(6) { background-color: var(--blanc); }
 .landpage {
     height: 100svh;
     display: grid;
-    grid-template-rows: 12% 80% 8%;
+    grid-template-rows: 12% 78% 10%;
     /* background-color: var(--bleu); */
     color: white;
     font-family: 'Urbanist';
@@ -113,11 +113,14 @@ footer a {
     padding-top: 10px;
     text-decoration: none;
     color: white;
-    font-size: var(--sub-title);
+}
+
+footer .arrow {
     animation: bounce;
     animation-duration: .6s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    font-size: var(--title);
 }
 
 .main-content {
@@ -157,23 +160,24 @@ footer:hover a{
 
 @keyframes bounce {
     0% {
-        transform: translateY(-15px);
+        transform: translateY(-25px);
     }
     100% {
-        transform: translateY(-5px);
+        transform: translateY(-15px);
     }
 }
 
 
 .gotop {
-    position: sticky;
+    position: absolute;
     bottom: 50px;
-    display: block;
-    text-align: end;
+    right: 10px;
+    display: flex;
     font-size: var(--sub-title);
     color: #353535;
     margin-right: 10px;
     text-decoration: none;
+    z-index: 0;
 }
 
 
