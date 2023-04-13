@@ -133,6 +133,8 @@ footer a {
 .main-content .paragraph {
     padding-top: 30px;
     padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
 }
 
 .main-content .paragraph h3 {
