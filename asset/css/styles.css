@@ -38,8 +38,8 @@ body {
 body::-webkit-scrollbar{ display: none; }
 
 section {
-    width: 100svw;
-    height: 100svh;
+    width: 100vw;
+    height: 100vh;
     
 }
 
