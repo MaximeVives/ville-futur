@@ -38,7 +38,7 @@ body {
 body::-webkit-scrollbar{ display: none; }
 
 section {
-    width: 100svw;
+    /* width: 100svw; */
     height: 100svh;
     
 }
@@ -191,11 +191,77 @@ footer:hover a{
 
 
 
-/*CONTENT SECTIONS */
+/* ABOUT SECTIONS */
 
-/* .main-content h3, .main-content p {
-    margin: 30px;
-} */
+.infos {
+    font-family: 'Urbanist';
+}
+
+.infos > * {
+    margin: 0px 5%;
+}
+
+.infos h2 {
+    text-align: left;
+    margin: 0;
+    font-weight: bold;
+}
+
+.infos p {
+    margin: 5px 0;
+}
+
+.infos .localisation {
+    margin-top: 10px;
+}
+
+
+.infos .map {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infos .informations-comp p {
+    margin: 8px 0;
+}
+
+.infos .register {
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.infos .register div {
+    display: flex;
+    flex-direction: column;
+    width: max(60%, 200px);
+}
+
+
+.infos .register div:not(.submit) input {
+    height: 30px;
+}
+
+.infos .register .submit {
+    align-items: end;
+}
+
+.infos .register .submit input {
+    width: fit-content;
+    padding: 12px 32px;
+    background-color: transparent;
+    border: 2px solid var(--bleu);
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.2s;
+}
+
+.infos .register .submit input:hover,
+.infos .register .submit input:active {
+    background-color: var(--bleu);
+}
 
 
 
